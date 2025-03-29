@@ -47,3 +47,8 @@ footer {
 .descricao-principal {
     margin-bottom: 35px; /* Aumenta o espaçamento entre a frase e o botão */
 }
+
+.text-produto1 {
+    font-size: 16px;
+    padding: 6px;
+}
