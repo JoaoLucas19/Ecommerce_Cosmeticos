@@ -12,21 +12,22 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #ff6ec4, #784ba0); /* Gradiente moderno */
+    background-attachment: fixed;
 }
 
 /* Estilo do container principal */
-.container {
+.container, .container-login {
     width: 90%;
     max-width: 400px;
     padding: 20px;
-    background: #d88484;
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Título principal */
-.titulo-principal {
+.titulo-principal, .login {
     text-align: center;
     padding-bottom: 10px;
     font-size: 24px;
@@ -61,20 +62,20 @@ input {
 }
 
 input:focus {
-    border-color: #d86767;
+    border-color: #ff6ec4; /* Cor do gradiente */
     outline: none;
-    box-shadow: 0 0 5px rgba(216, 103, 103, 0.5);
+    box-shadow: 0 0 5px rgba(255, 110, 196, 0.5);
 }
 
 input::placeholder {
     text-align: center;
 }
 
-/* Botão de Login */
-.btnLogin {
+/* Botões */
+.btnLogin, .login-btn {
     width: 100%;
     padding: 12px;
-    background: #d86767;
+    background: linear-gradient(135deg, #ff6ec4, #784ba0); /* Gradiente nos botões */
     color: white;
     border: none;
     border-radius: 8px;
@@ -83,13 +84,13 @@ input::placeholder {
     transition: 0.3s;
 }
 
-.btnLogin:hover {
-    background: #b54c4c;
+.btnLogin:hover, .login-btn:hover {
+    background: linear-gradient(135deg, #e651a0, #673ab7); /* Gradiente hover */
 }
 
 /* Responsividade */
 @media (max-width: 480px) {
-    .container {
+    .container, .container-login {
         width: 95%;
         padding: 15px;
     }
