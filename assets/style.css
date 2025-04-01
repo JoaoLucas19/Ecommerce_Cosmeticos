@@ -95,3 +95,37 @@ input::placeholder {
         padding: 15px;
     }
 }
+
+/* Feedback de mensagens de erro/sucesso */
+.feedback {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.feedback i {
+    font-size: 18px;
+}
+
+/* Exibir feedback */
+.feedback.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cores para mensagens de erro e sucesso */
+.feedback.success {
+    color: #2ecc71;
+}
+
+.feedback.error {
+    color: #e74c3c;
+}

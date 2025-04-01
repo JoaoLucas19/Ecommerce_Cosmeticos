@@ -6,7 +6,16 @@ const produtos = [
     { id: 5, nome: "Esmalte Cremoso Cappuccino", imagem: "./assets/img/esmalte-cremoso-cappuccino.png", preco: 32.00 },
     { id: 6, nome: "Esmalte Cremoso Obsessão", imagem: "./assets/img/esmalte-cremoso-obsessao.png", preco: 20.00 },
     { id: 7, nome: "Esmalte Donata", imagem: "./assets/img/esmalte-donata.png", preco: 35.00 },
-    { id: 8, nome: "Esmalte Seda Lilás", imagem: "./assets/img/esmalte-seda-lilas.png", preco: 22.00 } // ⬅️ Corrigido aqui
+    { id: 8, nome: "Esmalte Seda Lilás", imagem: "./assets/img/esmalte-seda-lilas.png", preco: 22.00 }, // ⬅️ Corrigido aqui
+    { id: 9, nome: "Kit Hidratante Nivea", imagem: "./assets/img/esmalte-nati-cremosos-ameixa.png", preco: 25.00 },
+    { id: 10, nome: "Esmalte Pérola", imagem: "./assets/img/esmalte-perola.png", preco: 29.00 },
+    { id: 11, nome: "Esmalte Xodó Cremoso", imagem: "./assets/img/esmalte-xodo-cremoso.png", preco: 28.00},
+    { id: 12, nome: "Esmalte Se Solta no Blues", imagem: "./assets/img/esmalte-se-solta-no-blues.png", preco: 30.00 },
+    { id: 13, nome: "Hidratante Corporal Pele Negra", imagem: "./assets/img/hidratante-corporal-pele-negra.png", preco: 35.00 },
+    { id: 14, nome: "Hidratante Monange", imagem: "./assets/img/hidratante-monange.png", preco: 30.00 },
+    { id: 15, nome: "Hidratante Nivea", imagem: "./assets/img/hidratante-nivea.png", preco: 25.00 },
+    { id: 16, nome: "Hidratante Skala", imagem: "./assets/img/hidratante-skala.png", preco: 28.00 },
+    { id: 17, nome: "Perfume Dior Sauvage", imagem: "./assets/img/perfume-dior-sauvage.png", preco: 55.00}
 ];
 
 const carrinho = [];

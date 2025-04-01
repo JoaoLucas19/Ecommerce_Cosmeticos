@@ -6,6 +6,7 @@
     <title>Maciel Cosméticos</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div class="container" id="cadastroContainer">
@@ -24,6 +25,7 @@
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha" required>
             </div>
             <button class="btnLogin">Cadastrar</button>
+            <p id="feedbackMessage" class="feedback"></p>
         </form>
     </div>
 
@@ -39,6 +41,7 @@
                 <input type="password" name="lsenha" id="senha-login" placeholder="Digite sua senha" required>
             </div>
             <button class="login-btn">Login</button>
+            <p id="loginFeedbackMessage" class="feedback"></p>
         </form>
     </div>
 
@@ -63,21 +66,27 @@
             const email = document.getElementById("email").value;
             const senha = document.getElementById("password").value;
             const confirmarSenha = document.getElementById("confirmPassword").value;
+            const feedbackMessage = document.getElementById("feedbackMessage");
 
             if (senha !== confirmarSenha) {
-                alert("As senhas não coincidem! Tente novamente.");
+                feedbackMessage.innerHTML = `<i class="fas fa-times-circle"></i> As senhas não coincidem!`;
+                feedbackMessage.className = "feedback error show";
                 return;
             }
 
             try {
                 await createUserWithEmailAndPassword(auth, email, senha);
-                alert("Cadastro realizado com sucesso! Agora, faça login.");
-                document.getElementById("cadastroContainer").style.display = "none";
-                document.getElementById("loginContainer").style.display = "block";
-                document.getElementById("formLogin").reset();
+                feedbackMessage.innerHTML = `<i class="fas fa-check-circle"></i> Cadastro realizado com sucesso!`;
+                feedbackMessage.className = "feedback success show";
+                setTimeout(() => {
+                    document.getElementById("cadastroContainer").style.display = "none";
+                    document.getElementById("loginContainer").style.display = "block";
+                    document.getElementById("formLogin").reset();
+                    feedbackMessage.classList.remove("show");
+                }, 2000);
             } catch (error) {
-                console.error("Erro ao cadastrar:", error.message);
-                alert("Erro: Tente novamente!" + error.message);
+                feedbackMessage.innerHTML = `<i class="fas fa-times-circle"></i> Erro: ${error.message}`;
+                feedbackMessage.className = "feedback error show";
             }
         });
 
@@ -85,13 +94,18 @@
             event.preventDefault();
             const email = document.getElementById("email-login").value;
             const senha = document.getElementById("senha-login").value;
+            const loginFeedbackMessage = document.getElementById("loginFeedbackMessage");
 
             try {
                 await signInWithEmailAndPassword(auth, email, senha);
-                window.location.href = 'apresentacao.html';
+                loginFeedbackMessage.innerHTML = `<i class="fas fa-check-circle"></i> Login bem-sucedido!`;
+                loginFeedbackMessage.className = "feedback success show";
+                setTimeout(() => {
+                    window.location.href = 'apresentacao.html';
+                }, 1500);
             } catch (error) {
-                console.error("Erro ao fazer login:", error.message);
-                alert("Erro ao fazer login: " + error.message);
+                loginFeedbackMessage.innerHTML = `<i class="fas fa-times-circle"></i> Erro ao fazer login: ${error.message}`;
+                loginFeedbackMessage.className = "feedback error show";
             }
         });
     </script>
