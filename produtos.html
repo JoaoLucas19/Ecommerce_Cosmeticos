@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Maciel Cosméticos</title>
+    <link rel="stylesheet" href="./assets/produtos.css">
+    <link rel="shortcut icon" href="./assets/favicon/favicon-buy.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="titulo-principal">Maciel Cosméticos</h1>
+        <p>Sua beleza, nossa paixão!</p>
+
+        <input type="text" id="searchInput" placeholder="Buscar produtos..." autocomplete="off">
+        <button onclick="filtarProdutos()">Pesquisar</button>
+        <a href="carrinho.html">🛒 Carrinho (<span id="cartCount">0</span>)</a>
+    </header>
+
+    <main>
+        <section id="product-list"></section>
+    </main>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>

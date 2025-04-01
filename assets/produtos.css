@@ -1,0 +1,40 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f8b400;
+}
+
+.produto {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 200px;
+    text-align: center;
+}
+
+.produto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
